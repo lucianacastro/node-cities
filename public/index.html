@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>places</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+	<div class="main-container">
+
+		<div class="container container-calc">
+			<div class="box-top"></div>
+			<h1 class="main-title">A dónde puedo ir de vacaciones?</h1>
+			<button class="lucky-button">Probar suerte</button>
+			<div id="destination"></div>
+			<div class="advanced-container">
+				<h1 class="main-title">Avanzado</h1>
+				<h2 class="subtitle">Ando con ganas de...</h3>
+				<select id="tripType" class="mySelectBoxClass" name="select">
+					<option value="beach">Playa</option> 
+				 	<option value="city" selected>Ciudad</option>
+					<option value="city-beach">Playa y ciudad</option>
+				</select>
+				<h2 class="subtitle">Mi presupuesto es nivel...</h3>
+				<select id="budget" class="mySelectBoxClass" name="select">
+					<option value="extracheap">Bajo</option> 
+					<option value="cheap">Medio</option> 
+				 	<option value="little-expensive" selected>Más que medio</option>
+					<option value="expensive">Ricardo Fort</option>
+				</select>
+				<button class="done-button">Listo!</button>
+				<div id="advanced-destination"></div>
+				<div id="message"></div>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src='jquery.customSelect-master/jquery.customSelect.js'></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

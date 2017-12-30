@@ -8,15 +8,66 @@ cities.forEach(function(city) {
 	city._link = 'http://localhost:3000/api/cities/' + escape(city.name);
 });
 
+app.use(express.static('./public'));
+
 app.get('/', function(req, res) {
 	console.log('Me pidieron hello world, para ', req.query);
 	res.send('hello world');
 });
 
 app.get('/api/cities', function(req, res) {
+	var budget = req.query.budget;
+	var tripType = req.query.tripType;
+	var characteristics = req.query.characteristics;
+	var citiesFiltered = cities;
+
+	if (budget) {
+		citiesFiltered = citiesFiltered.filter(function(city) {
+			return city.budget === budget;
+		});
+	}
+	if (tripType) {
+		citiesFiltered = citiesFiltered.filter(function(city) {
+			return city.tripType === tripType;
+		});
+	}
+	if(characteristics) {
+		citiesFiltered = citiesFiltered.filter( function(city) {
+			return city.characteristics.find(function(characteristic) {
+				return characteristic === characteristics;
+			});
+		});
+	}
 	res.send({
-		items: cities
+		_total: citiesFiltered.length,
+		items: citiesFiltered
 	});
+});
+
+app.get('/api/random/city', function(req, res) {
+	var budget = req.query.budget;
+	var tripType = req.query.tripType;
+	var characteristics = req.query.characteristics;
+	var citiesFiltered = cities;
+
+	if (budget) {
+		citiesFiltered = citiesFiltered.filter(function(city) {
+			return city.budget === budget;
+		});
+	}
+	if (tripType) {
+		citiesFiltered = citiesFiltered.filter(function(city) {
+			return city.tripType === tripType;
+		});
+	}
+	if(characteristics) {
+		citiesFiltered = citiesFiltered.filter( function(city) {
+			return city.characteristics.find(function(characteristic) {
+				return characteristic === characteristics;
+			});
+		});
+	}
+	res.send(citiesFiltered[Math.floor(Math.random()*citiesFiltered.length)]);
 });
 
 app.get('/api/cities/:cityName', function(req, res) {
@@ -34,3 +85,9 @@ app.get('/api/cities/:cityName', function(req, res) {
 app.listen(3000, function() {
 	console.log('El servidor arrancó en el puerto 3000');
 });
+
+
+
+
+
+

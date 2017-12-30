@@ -1,0 +1,133 @@
+.main-container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1180px;
+	font-family: 'Roboto', sans-serif;
+	color: #3e424c;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	height: 360px;
+	padding: 20px;
+	
+}
+.container.container-calc {
+	border: 2px solid #614B74;
+}
+
+
+.main-title {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.subtitle {
+	font-size: 16px;
+	font-weight: 400;
+}
+.lucky-button {
+	position: absolute;
+	left: 50%;
+    margin-left: -59px;
+    margin-top: -10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #E1DFEB;
+	outline: none;
+}
+
+#destination {
+	text-align: center;
+	color: #664474;
+	font-size: 20px;
+	padding: 30px 5px 10px;
+}
+
+.advanced-container {
+	margin-top: -20px;
+}
+.done-button {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -52px;
+	margin-top: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #E1DFEB;
+	border-color: #b7bfcf;
+	outline: none;
+	padding: 5px 30px;
+}
+
+#advanced-destination {
+	text-align: center;
+	color: #000;
+	font-size: 20px;
+	padding: 60px 5px 0;
+}
+
+#message {
+	text-align: center;
+	color: #000;
+	font-size: 14px;
+	margin-top: -20px;
+}
+
+/*select {
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   padding: 5px;
+   width: 250px;
+}
+select:focus { 
+	outline: none;
+}
+
+*/
+
+.customSelect { 
+	width: 250px !important;
+	background-color: white;
+    padding: 6px 10px;
+    border: 2px solid #b7bfcf;
+    background: url(http://adam.co/lab/jquery/customselect/images/select-box-bg.gif) right center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    color: #3e424c;
+}
+
+.customSelectInner {
+	width: 250px !important;
+
+}
+
+.customSelect.customSelectHover {
+/* Styles for when the select box is hovered */
+}
+
+.customSelect.customSelectOpen {
+/* Styles for when the select box is open */
+}
+
+.customSelect.customSelectFocus {
+/* Styles for when the select box is in focus */
+}
+
+
+
+
+
+
+
+
