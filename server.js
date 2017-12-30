@@ -15,12 +15,8 @@ app.get('/', function(req, res) {
 	res.send('hello world');
 });
 
-app.get('/api/cities', function(req, res) {
-	var budget = req.query.budget;
-	var tripType = req.query.tripType;
-	var characteristics = req.query.characteristics;
+var getCitiesFiltered = function(budget, tripType, characteristics) {
 	var citiesFiltered = cities;
-
 	if (budget) {
 		citiesFiltered = citiesFiltered.filter(function(city) {
 			return city.budget === budget;
@@ -38,6 +34,15 @@ app.get('/api/cities', function(req, res) {
 			});
 		});
 	}
+	return citiesFiltered;
+}
+
+app.get('/api/cities', function(req, res) {
+	var budget = req.query.budget;
+	var tripType = req.query.tripType;
+	var characteristics = req.query.characteristics;
+	var citiesFiltered = getCitiesFiltered(budget, tripType, characteristics);
+	
 	res.send({
 		_total: citiesFiltered.length,
 		items: citiesFiltered
@@ -48,25 +53,8 @@ app.get('/api/random/city', function(req, res) {
 	var budget = req.query.budget;
 	var tripType = req.query.tripType;
 	var characteristics = req.query.characteristics;
-	var citiesFiltered = cities;
+	var citiesFiltered = getCitiesFiltered(budget, tripType, characteristics);
 
-	if (budget) {
-		citiesFiltered = citiesFiltered.filter(function(city) {
-			return city.budget === budget;
-		});
-	}
-	if (tripType) {
-		citiesFiltered = citiesFiltered.filter(function(city) {
-			return city.tripType === tripType;
-		});
-	}
-	if(characteristics) {
-		citiesFiltered = citiesFiltered.filter( function(city) {
-			return city.characteristics.find(function(characteristic) {
-				return characteristic === characteristics;
-			});
-		});
-	}
 	res.send(citiesFiltered[Math.floor(Math.random()*citiesFiltered.length)]);
 });
 

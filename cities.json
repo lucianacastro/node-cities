@@ -139,6 +139,13 @@
 			"budget": "extracheap",
 			"tripType": "city",
 			"characteristics": ["beach", "cheap"]
+		},
+		{
+			"name": "Mar del Plata",
+			"country": "Argentina",
+			"budget": "extracheap",
+			"tripType": "city-beach",
+			"characteristics": ["beach", "cheap", "city"]
 		}
 	]
 }
