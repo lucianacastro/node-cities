@@ -5,7 +5,7 @@ var app = express();
 var cities = require('./cities.json').cities;
 
 cities.forEach(function(city) {
-	city._link = 'http://localhost:3000/api/cities/' + escape(city.name);
+	city._link = '/api/cities/' + escape(city.name);
 });
 
 app.use(express.static('./public'));
