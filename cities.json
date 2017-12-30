@@ -1,0 +1,144 @@
+{
+	"cities": [{
+			"name": "New York",
+			"country": "USA",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "technocology", "cosmopolitan", "big city"]
+		},
+		{
+			"name": "Tokyo",
+			"country": "Japan",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "technocology", "cosmopolitan", "big city", "asian", "tradition"]
+		},
+		{
+			"name": "Paris",
+			"country": "France",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "old city", "art", "europe"]
+		},
+		{
+			"name": "London",
+			"country": "UK",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "old city", "bad weather", "art", "europe"]
+		},
+		{
+			"name": "Rome",
+			"country": "Italy",
+			"budget": "little-expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "old city", "noisy", "art", "europe"]
+		},
+		{
+			"name": "Barcelona",
+			"country": "Spain",
+			"budget": "normal",
+			"tripType": "city-beach",
+			"characteristics": ["citybreak", "historical", "museums", "art", "sea", "beach", "europe"]
+		},
+		{
+			"name": "Madrid",
+			"country": "Spain",
+			"budget": "cheap",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "art", "cosmopolitan", "europe"]
+		},
+		{
+			"name": "Cancun",
+			"country": "Mexico",
+			"budget": "cheap",
+			"tripType": "beach",
+			"characteristics": ["shopping", "beach", "sea", "great weather", "tropical"]
+		},
+		{
+			"name": "Miami",
+			"country": "USA",
+			"budget": "expensive",
+			"tripType": "beach",
+			"characteristics": ["shopping", "beach", "sea", "great weather"]
+		},
+
+		{
+			"name": "Kingston",
+			"country": "Jamaica",
+			"budget": "expensive",
+			"tripType": "beach",
+			"characteristics": ["beach", "sea", "great weather", "tropical"]
+		},
+		{
+			"name": "Playa del Carmen",
+			"country": "Mexico",
+			"budget": "cheap",
+			"tripType": "beach",
+			"characteristics": ["shopping", "beach", "sea", "great weather", "tropical"]
+		},
+		{
+			"name": "Maui",
+			"country": "Hawai",
+			"budget": "expensive",
+			"tripType": "beach",
+			"characteristics": ["beach", "sea", "great weather", "tropical"]
+		},
+		{
+			"name": "Rio de Janeiro",
+			"country": "Brasil",
+			"budget": "cheap",
+			"tripType": "city-beach",
+			"characteristics": ["beach", "sea", "great weather", "tropical"]
+		},
+		{
+			"name": "Florence",
+			"country": "Italy",
+			"budget": "little-expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "old city", "art", "europe"]
+		},
+		{
+			"name": "Munich",
+			"country": "Germany",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "historical", "museums", "art", "europe"]
+		},
+		{
+			"name": "Bali",
+			"country": "Indonesia",
+			"budget": "cheap",
+			"tripType": "beach",
+			"characteristics": ["beach", "historical", "island", "temples", "spiritual"]
+		},
+		{
+			"name": "Amsterdam",
+			"country": "Netherlands",
+			"budget": "little-expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "museums", "technocology", "bad weather", "art", "europe"]
+		},
+		{
+			"name": "Seoul",
+			"country": "South Korea",
+			"budget": "expensive",
+			"tripType": "city",
+			"characteristics": ["citybreak", "technocology", "cosmopolitan", "big city", "asian", "tradition"]
+		},
+		{
+			"name": "Santa Teresita",
+			"country": "Argentina",
+			"budget": "extracheap",
+			"tripType": "beach",
+			"characteristics": ["beach", "sea", "cheap"]
+		},
+		{
+			"name": "Rosario",
+			"country": "Argentina",
+			"budget": "extracheap",
+			"tripType": "city",
+			"characteristics": ["beach", "cheap"]
+		}
+	]
+}
