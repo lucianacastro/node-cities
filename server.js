@@ -44,10 +44,9 @@ app.get('/api/cities', function(req, res) {
 	var tripType = req.query.tripType;
 	var characteristics = req.query.characteristics;
 	var citiesFiltered = getCitiesFiltered(budget, tripType, characteristics);
-	var p = req.query.p;
 	var ipp = req.query.ipp = 3;
 	
-	res.send(paginator.paginateList(citiesFiltered, p, ipp, req.query));
+	res.send(paginator.paginateList(citiesFiltered, ipp, req.query));
 
 });
 

@@ -1,7 +1,5 @@
-var paginateList = function(items, p, ipp, query) {
-	
-	p = parseInt(p || 1);
-	query.p = query.p || p;
+var paginateList = function(items, ipp, query) {
+	var p = parseInt(query.p || 1);
 	var final = p * ipp;
 	console.log("final value: " + final);
 
@@ -21,7 +19,11 @@ module.exports = { paginateList: paginateList };
 
 var getPageUrl = function(query, pValue) {
 	var baseUrl = 'http://localhost:3000/api/cities';
- 	var queryString = Object.keys(query).map(function(key) {
+	var queryKeys = Object.keys(query);
+	if (queryKeys.indexOf('p') < 0) {
+		queryKeys.push('p');
+	}
+ 	var queryString = queryKeys.map(function(key) {
  		return key + '=' + (key === 'p' ? pValue : query[key]);
  	}).join('&');
 
